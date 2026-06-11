@@ -231,7 +231,7 @@ function Hero() {
           className="text-white leading-[1.05] tracking-tight max-w-[820px] mb-8"
           style={{ fontFamily: "'Stack', sans-serif", fontWeight: 400, fontSize: 'clamp(2.5rem, 6vw, 5rem)' }}
         >
-          When your car's electrical system fails, you don't need a guess.
+          Get your car's electrical system fixed. The first time.
         </motion.h1>
 
         <motion.div
@@ -249,7 +249,7 @@ function Hero() {
           transition={{ delay: 0.3, duration: 0.7 }}
           className="text-[#b8b8b8] text-lg md:text-xl leading-relaxed max-w-[580px] mb-12"
         >
-          JLJ is the specialist Pretoria has been driving across town to see for years. Alternators, starters, and wiring faults sorted fast, honestly, and at prices that won't make a bad day worse.
+          Alternators, starters, and wiring faults sorted fast, honestly, and at prices that won't make a bad day worse. Our customers drive from across Gauteng for it.
         </motion.p>
 
         <motion.div
@@ -345,7 +345,7 @@ const SERVICE_CARDS = [
   {
     num: '02',
     title: 'Electrical Fault Finding',
-    desc: 'From mystery warning lights to rat-chewed wiring looms, engine management faults, central locking, lights, and every electrical problem in between. Diagnosed accurately. Fixed properly.',
+    desc: 'From mystery warning lights to rat-chewed wiring looms, engine management faults, central locking, lights, and every electrical problem in between. Diagnosed accurately and fixed.',
     bgImage: 'images/engine-injectors.webp',
   },
   {
@@ -460,7 +460,7 @@ function WhyJLJ() {
             viewport={{ once: true }}
           >
             <motion.p variants={fadeUp} className="text-[#9B1C1C] text-xs font-bold tracking-[0.28em] uppercase mb-5">
-              Why JLJ
+              Why JLJ Auto Electrical
             </motion.p>
             <motion.h2
               id="why-jlj-heading"
@@ -471,13 +471,13 @@ function WhyJLJ() {
               Not just another workshop on Soutter Street.
             </motion.h2>
             <motion.p variants={fadeUp} className="text-[#3a3a3a] text-lg leading-relaxed mb-6">
-              JLJ has been fixing auto electrical problems in Pretoria West for decades. It is run by a family that genuinely cares, and customers drive from across Gauteng specifically for the alternator and starter expertise you won't find at a general mechanic.
+              JLJ Auto Electrical has been fixing electrical problems in Pretoria West for decades. It is run by a family that genuinely cares, and our customers drive from across Gauteng specifically for the alternator and starter expertise you won't find at a general mechanic.
             </motion.p>
             <motion.p variants={fadeUp} className="text-[#3a3a3a] text-lg leading-relaxed mb-6">
-              Uncle Johan and the team have built their reputation one job at a time, not through advertising. Reviewers come back because the work gets done properly, the price is fair, and if a part fails after the job, it gets swapped without argument.
+              Johan and the team have built their reputation one job at a time, not through advertising. Reviewers come back because the work gets done properly, the price is fair, and if a part fails after the job, it gets swapped without argument.
             </motion.p>
             <motion.p variants={fadeUp} className="text-[#3a3a3a] text-lg leading-relaxed mb-12">
-              That is not a policy. That is just how they do things.
+              That is just how they do things.
             </motion.p>
 
             <motion.div variants={stagger} className="flex flex-col gap-5">
@@ -631,12 +631,37 @@ function HowItWorks() {
     {
       num: '01',
       title: 'Book',
-      desc: 'Call 012 327 0948 or send a message using the form below. Tell the team what your vehicle is doing and they will give you a clear idea of what to expect before you even arrive.',
+      desc: (
+        <>
+          Call{' '}
+          <a href="tel:0123270948" className="text-[#9B1C1C] font-semibold underline hover:text-[#7d1616] transition-colors duration-200">
+            012 327 0948
+          </a>{' '}
+          or send a message using the{' '}
+          <a href="#contact" className="text-[#9B1C1C] font-semibold underline hover:text-[#7d1616] transition-colors duration-200">
+            form below
+          </a>
+          . Tell the team what your vehicle is doing and they will give you a clear idea of what to expect before you even arrive.
+        </>
+      ),
     },
     {
       num: '02',
       title: 'Drop In',
-      desc: 'Bring your vehicle to 443 Soutter St, Pretoria West. Most diagnoses happen the same day. The team will keep you informed throughout. No mystery, no waiting in the dark.',
+      desc: (
+        <>
+          Bring your vehicle to{' '}
+          <a
+            href="https://www.google.com/maps/dir/?api=1&destination=443+Soutter+Street+Pretoria+West+Pretoria"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[#9B1C1C] font-semibold underline hover:text-[#7d1616] transition-colors duration-200"
+          >
+            443 Soutter St, Pretoria West
+          </a>
+          . Most diagnoses happen the same day. The team will keep you informed throughout. No mystery, no waiting in the dark.
+        </>
+      ),
     },
     {
       num: '03',
@@ -877,16 +902,16 @@ function Contact() {
 
 const FAQS = [
   {
-    q: 'How long does an alternator replacement take at JLJ?',
+    q: 'How long does an alternator replacement take at JLJ Auto Electrical?',
     a: 'Most alternator replacements and reconditions are completed the same day, often within a few hours of drop-off. Turnaround times depend on parts availability, but the team will keep you informed from the moment your vehicle is assessed.',
   },
   {
     q: 'Do you sell second-hand or reconditioned alternators and starters?',
-    a: 'Yes. JLJ stocks new, reconditioned, and quality second-hand alternators and starter motors. All units are tested before fitting, and if a part fails after the job, it gets replaced without argument.',
+    a: 'Yes. JLJ Auto Electrical stocks new, reconditioned, and quality second-hand alternators and starter motors. All units are tested before fitting, and if a part fails after the job, it gets replaced without argument.',
   },
   {
     q: 'What is the difference between a reconditioned and a second-hand alternator?',
-    a: 'A reconditioned alternator has been stripped, cleaned, rebuilt with new internal components (brushes, bearings, rectifier), and tested to factory specification. A second-hand unit is a tested pull-out from another vehicle. JLJ carries both and will advise which option makes sense for your vehicle and budget.',
+    a: 'A reconditioned alternator has been stripped, cleaned, rebuilt with new internal components (brushes, bearings, rectifier), and tested to factory specification. A second-hand unit is a tested pull-out from another vehicle. JLJ Auto Electrical carries both and will advise which option makes sense for your vehicle and budget.',
   },
   {
     q: 'How do I know if my alternator is failing?',
@@ -898,15 +923,15 @@ const FAQS = [
   },
   {
     q: 'Can you repair wiring damage caused by rats or rodents?',
-    a: 'Yes. JLJ has repaired many rat-damaged wiring looms and knows exactly what to look for. Rodent damage can be extensive and hidden, but the team will trace the full extent of the damage and repair it properly.',
+    a: 'Yes. JLJ Auto Electrical has repaired many rat-damaged wiring looms and knows exactly what to look for. Rodent damage can be extensive and hidden, but the team will trace the full extent of the damage and repair it properly.',
   },
   {
     q: 'What vehicles do you service?',
-    a: 'JLJ services cars, bakkies, light commercial vehicles, caravans, trailers, and golf carts. They work on both petrol and diesel vehicles and are familiar with a wide range of makes and models across the Pretoria and Gauteng market.',
+    a: 'JLJ Auto Electrical services cars, bakkies, light commercial vehicles, caravans, trailers, and golf carts. They work on both petrol and diesel vehicles and are familiar with a wide range of makes and models across the Pretoria and Gauteng market.',
   },
   {
     q: 'Do you offer a warranty on parts and repairs?',
-    a: 'JLJ stands behind their work. If a part fitted by the team fails, it gets swapped without argument. Speak to the team directly on 012 327 0948 to confirm warranty terms for your specific repair or part.',
+    a: 'JLJ Auto Electrical stands behind their work. If a part fitted by the team fails, it gets swapped without argument. Speak to the team directly on 012 327 0948 to confirm warranty terms for your specific repair or part.',
   },
   {
     q: 'Do you accept credit and debit cards?',
@@ -914,10 +939,10 @@ const FAQS = [
   },
   {
     q: 'Do you service vehicles from outside Pretoria West?',
-    a: "Yes. Customers drive from across Pretoria and the wider Gauteng area specifically for JLJ's alternator and starter expertise. If you can get your vehicle to 443 Soutter St, the team will sort it out.",
+    a: "Yes. Customers drive from across Pretoria and the wider Gauteng area specifically for JLJ Auto Electrical's alternator and starter expertise. If you can get your vehicle to 443 Soutter St, the team will sort it out.",
   },
   {
-    q: 'Is JLJ a member of a recognised industry body?',
+    q: 'Is JLJ Auto Electrical a member of a recognised industry body?',
     a: 'Yes. JLJ Auto Electrical is RMI-registered, registration number 4000076. RMI (Retail Motor Industry Organisation) membership is a standard for professionalism and ethical conduct in the South African motor trade, and most fly-by-night operators do not have it.',
   },
 ]
