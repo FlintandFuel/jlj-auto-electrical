@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 
 // ─── localStorage key ─────────────────────────────────────
-const LS_KEY = 'sb_start'
+const LS_KEY = 'sb_start_v2'
 const SEVEN_DAYS_MS = 7 * 24 * 60 * 60 * 1000
 
 // ─── Timer logic ──────────────────────────────────────────
