@@ -1,22 +1,9 @@
 import { useState, useEffect } from 'react'
 
-// ─── localStorage key ─────────────────────────────────────
-const LS_KEY = 'sb_start_v2'
-const SEVEN_DAYS_MS = 7 * 24 * 60 * 60 * 1000
-
-// ─── Timer logic ──────────────────────────────────────────
-// On first load: record Date.now() under 'sb_start'.
-// On every subsequent load: read that value.
-// Expiry = sb_start + 7 days. Never resets across refreshes
-// or return visits unless localStorage is manually cleared.
-function getExpiry() {
-  let start = parseInt(localStorage.getItem(LS_KEY), 10)
-  if (!start || isNaN(start)) {
-    start = Date.now()
-    localStorage.setItem(LS_KEY, String(start))
-  }
-  return start + SEVEN_DAYS_MS
-}
+// ─── CHANGE THIS DATE TO RESET THE TIMER ─────────────────
+// Set to 7 days from today, format: YYYY-MM-DD
+const OFFER_EXPIRY = '2026-06-29'
+// ──────────────────────────────────────────────────────────
 
 function pad(n) {
   return String(n).padStart(2, '0')
@@ -49,7 +36,7 @@ export default function SalesBar() {
   const [remaining, setRemaining] = useState(null)
 
   useEffect(() => {
-    const expiry = getExpiry()
+    const expiry = new Date(OFFER_EXPIRY + 'T23:59:59').getTime()
 
     const tick = () => setRemaining(expiry - Date.now())
     tick()
@@ -69,7 +56,6 @@ export default function SalesBar() {
       className="fixed bottom-0 left-0 right-0 z-50 bg-[#3D3A36] text-white shadow-[0_-2px_16px_rgba(0,0,0,0.25)]"
     >
       {expired ? (
-        // ── Expired state ──────────────────────────────────
         <div className="flex items-center justify-center px-4 py-4">
           <a
             href="https://calendly.com/flintandfuelcreative"
@@ -82,7 +68,6 @@ export default function SalesBar() {
           </a>
         </div>
       ) : (
-        // ── Active state ───────────────────────────────────
         <div className="max-w-[1180px] mx-auto px-4 md:px-8">
 
           <div className="flex flex-wrap md:flex-nowrap items-center justify-between gap-x-6 gap-y-2 py-3">
