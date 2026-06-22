@@ -473,13 +473,9 @@ function WhyJLJ() {
             <motion.p variants={fadeUp} className="text-[#3a3a3a] text-lg leading-relaxed mb-6">
               JLJ Auto Electrical has been fixing electrical problems in Pretoria West for decades. It is run by a family that genuinely cares, and our customers drive from across Gauteng specifically for the alternator and starter expertise you won't find at a general mechanic.
             </motion.p>
-            <motion.p variants={fadeUp} className="text-[#3a3a3a] text-lg leading-relaxed mb-6">
+            <motion.p variants={fadeUp} className="text-[#3a3a3a] text-lg leading-relaxed mb-12">
               Johan and the team have built their reputation one job at a time, not through advertising. Reviewers come back because the work gets done properly, the price is fair, and if a part fails after the job, it gets swapped without argument.
             </motion.p>
-            <motion.p variants={fadeUp} className="text-[#3a3a3a] text-lg leading-relaxed mb-12">
-              That is just how they do things.
-            </motion.p>
-
             <motion.div variants={stagger} className="flex flex-col gap-5">
               {trustDetails.map(t => (
                 <motion.div key={t.label} variants={fadeUp} className="flex gap-4 items-start">
