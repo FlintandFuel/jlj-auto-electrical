@@ -36,7 +36,7 @@ export default function SalesBar() {
   const [remaining, setRemaining] = useState(null)
 
   useEffect(() => {
-    const expiry = new Date(OFFER_EXPIRY + 'T23:59:59').getTime()
+    const expiry = new Date(OFFER_EXPIRY + 'T00:00:00').getTime()
 
     const tick = () => setRemaining(expiry - Date.now())
     tick()
